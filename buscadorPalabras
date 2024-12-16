@@ -1,0 +1,36 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package boletin6;
+
+import java.util.Scanner;
+
+public class ejercicio7 {
+    static Scanner scanner = new Scanner(System.in);
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        String frase;
+        String palabra;
+        int contador = 0;
+        
+        System.out.println("Ingrese una frase:");
+        frase = scanner.nextLine();
+        
+        System.out.println("Ingrese una palabra: ");
+        palabra = scanner.nextLine();
+        
+        String[] palabras = frase.split(" ");
+        
+        for(String cosa: palabras){
+            if(cosa.equals(palabra)){
+            contador++;
+            }
+        }
+        
+        System.out.println("En la frase indicada, la palabra: "+ palabra +" ha sido encontrada "+ contador+" veces");
+    }
+    
+}
